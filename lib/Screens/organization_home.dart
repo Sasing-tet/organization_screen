@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hackathon/Widgets/dialog_box.dart';
 
 class OrganizationHome extends StatefulWidget {
   const OrganizationHome({super.key});
@@ -31,7 +32,16 @@ class _OrganizationHomeState extends State<OrganizationHome> {
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
-                    Icon(Icons.add)
+                    InkWell(
+                      child: Icon(Icons.add),
+                      onTap: () => showDialog(
+                        context: context,
+                        barrierDismissible: true,
+                        builder: (context) {
+                          return AddTodoWidget();
+                        },
+                      ),
+                    )
                   ],
                 ),
               ),

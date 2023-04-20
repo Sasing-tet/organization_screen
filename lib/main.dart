@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/home_page.dart';
-import 'package:hackathon/organization_home.dart';
+import 'package:hackathon/Screens/organization_home.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -14,7 +14,7 @@ void main() {
         //fontFamily: GoogleFonts.lexend().fontFamily,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const OrganizationHome(),
     ),
   );
 }
