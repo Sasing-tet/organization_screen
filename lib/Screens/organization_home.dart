@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hackathon/Widgets/dialog_box.dart';
+import 'package:provider/provider.dart';
 
 class OrganizationHome extends StatefulWidget {
   const OrganizationHome({super.key});
@@ -9,6 +10,23 @@ class OrganizationHome extends StatefulWidget {
   @override
   State<OrganizationHome> createState() => _OrganizationHomeState();
 }
+
+//model
+class Event {
+  String eventName;
+  String eventDesc;
+  DateTime eventTime;
+  String status;
+
+  Event({
+    required this.eventName,
+    required this.eventDesc,
+    required this.eventTime,
+    this.status = 'long',
+  });
+}
+
+//Provider
 
 class _OrganizationHomeState extends State<OrganizationHome> {
   @override
